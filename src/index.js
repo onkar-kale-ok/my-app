@@ -8,10 +8,12 @@ import CompoWillMount from './CompoWillMount';
 import CompoDidMount from './CompoDidMount'
 import ShouldCompoUpdate from './ShouldCompoUpdate';
 import CompoWillUpdate from './CompoWillUpdate';
+import SnapshotBeforeUpdate from './SnapshotBeforeUpdate';
+import PureComponent from './PureComponent';
 
 ReactDOM.render(
   <React.StrictMode>
-    <CompoWillMount />
+    <PureComponent />
   </React.StrictMode>,
   document.getElementById('root')
 );
