@@ -11,10 +11,12 @@ import CompoWillUpdate from './CompoWillUpdate';
 import SnapshotBeforeUpdate from './SnapshotBeforeUpdate';
 import PureComponent from './PureComponent';
 import ApiIntegration from './ApiIntegration';
+import Router from './Router';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <PureComponent />
+    <Router />
   </React.StrictMode>,
   document.getElementById('root')
 );
