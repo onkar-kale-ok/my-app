@@ -10,6 +10,7 @@ import ShouldCompoUpdate from './ShouldCompoUpdate';
 import CompoWillUpdate from './CompoWillUpdate';
 import SnapshotBeforeUpdate from './SnapshotBeforeUpdate';
 import PureComponent from './PureComponent';
+import ApiIntegration from './ApiIntegration';
 
 ReactDOM.render(
   <React.StrictMode>
