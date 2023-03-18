@@ -15,6 +15,55 @@ function MiniProject(params) {
         }
     };
 
+    const seriesForHorizontalChart= [{
+        data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380]
+      }];
+
+      const optionsForHorizontalChart= {
+        chart: {
+          type: 'bar',
+          height: 350
+        },
+        plotOptions: {
+          bar: {
+            borderRadius: 4,
+            horizontal: true,
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        xaxis: {
+          categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan',
+            'United States', 'China', 'Germany'
+          ],
+        }
+      };
+    
+    
+     const seriesForPie= [44, 55, 13, 43, 22];
+
+     const optionsForPie= {
+        chart: {
+          width: 380,
+          type: 'pie',
+        },
+        labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }]
+      }
+
+
+
     const series = [{
         name: 'series-1',
         data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
@@ -84,6 +133,8 @@ function MiniProject(params) {
 
             <ReactApexChart options={options} series={series} type="line" width={800} height={320} />
 
+            <ReactApexChart options={optionsForHorizontalChart} series={seriesForHorizontalChart} type="bar" width={800} height={320} />
+            <ReactApexChart options={optionsForPie} series={seriesForPie} type="pie" width={800} height={320} />
 
         </>
     )
