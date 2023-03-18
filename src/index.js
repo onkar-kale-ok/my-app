@@ -3,21 +3,26 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import ClassCompExample from './ClassCompExample';
-import CompoWillMount from './CompoWillMount';
-import CompoDidMount from './CompoDidMount'
-import ShouldCompoUpdate from './ShouldCompoUpdate';
-import CompoWillUpdate from './CompoWillUpdate';
-import SnapshotBeforeUpdate from './SnapshotBeforeUpdate';
-import PureComponent from './PureComponent';
-import ApiIntegration from './ApiIntegration';
-import Router from './Router';
+import HomeContainer  from './containers/HomeContainer';
+import HeaderContainer from './containers/HeaderContainer';
+import MiniProject from './MiniProject';
+import FooterContainer from './containers/FooterContainer';
+import {createStore} from 'redux';
+import {Provider}  from 'react-redux';
+import Root from './services/reducers/index';
+import MultiPlicationForm from './MultiplicationForm';
+const store = createStore(Root); // it will store the state at single place
+// import FirstPage ''
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Router />
-  </React.StrictMode>,
+  // <React.StrictMode>
+  <Provider store={store}>
+    {/* <HeaderContainer/>
+    <HomeContainer />
+    <FooterContainer/> */}
+    <MiniProject/>
+  </Provider>,
   document.getElementById('root')
 );
 
